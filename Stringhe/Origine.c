@@ -1,8 +1,13 @@
+/* Contiamo parole, vocali e consonanti presenti in una stringa
+ */
+
 #include <stdio.h>
 
 int main() {
 	int parole = 0, vocali = 0, consonanti = 0;
 	char stringa[] = "Carlo sei proprio un ciula, studia babbione";
+	
+	/* Scorriamo la stringa e controlliamo se il carattere è una vocale, uno spazio o altro */
 	for (int i = 0; stringa[i] != '\0'; ++i) {
 		if (stringa[i] == 'a' || stringa[i] == 'e' || stringa[i] == 'i' || stringa[i] == 'o' || stringa[i] == 'u' ||
 			stringa[i] == 'A' || stringa[i] == 'E' || stringa[i] == 'I' || stringa[i] == 'O' || stringa[i] == 'U')
@@ -12,6 +17,7 @@ int main() {
 		else
 			++consonanti;
 	}
+
 	printf("Nella frase \"%s\" ci sono %d parole\n", stringa, ++parole);
 	printf("Ci sono %d vocali e %d consonanti\n", vocali, consonanti);
 	system("pause");

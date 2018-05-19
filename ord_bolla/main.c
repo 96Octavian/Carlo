@@ -1,15 +1,18 @@
+/*Bubble sort su un array preso da user input
+*/
+
 #include "../useful.h"
 
 #define N 3
 
 int main() {
-	puts("Bubble sort");
 	int a[N], i, j, temp;
+	
+	/* Riempiamo l'array con l'input da utente */
 	puts("Riempi l\'array");
-	//fillArray(a, N);
-	for (i = 0; i < N; i++) {
-		scanf("%d", &a[i]);
-	}
+	fillArray(a, N);
+
+	/* Bubble sort */
 	for (i = 0; i < N; i++) {
 		temp = a[i];
 		j = i - 1;
@@ -19,10 +22,10 @@ int main() {
 		}
 		a[j + 1] = temp;
 	}
-	//printArray(a, N);
-	for (i = 0; i < N; i++) {
-		printf("%d\t", a[i]);
-	}
+
+	/* Stampiamo l'array ordinato */
+	printArray(a, N);
+
 	getch();
 	return;
 }

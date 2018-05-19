@@ -1,3 +1,6 @@
+/* Controllo se una stringa è palindroma
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <Windows.h>

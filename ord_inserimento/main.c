@@ -1,15 +1,17 @@
+/* Ordinamento per inserimento
+*/
+
 #include "../useful.h"
 
 #define N 3
 
 int main() {
-	puts("Inserimento");
 	int a[N], i, j, temp;
+
+	/* Riempiamo l'array con l'input da utente */
 	puts("Riempi l\'array");
 	fillArray(a, N);
-	/*for (i = 0; i < N; i++) {
-		scanf("%d", &a[i]);
-	}*/
+	/* Insertion sort */
 	for (i = 0; i < N; i++) {
 		temp = a[i];
 		j = i - 1;
@@ -19,10 +21,10 @@ int main() {
 		}
 		a[j + 1] = temp;
 	}
+
+	/* Stampiamo l'array ordinato */
 	printArray(a, N);
-	/*for (i = 0; i < N; i++) {
-		printf("%d\t", a[i]);
-	}*/
+
 	getch();
 	return;
 }
